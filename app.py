@@ -7,7 +7,7 @@ query_df = get_query_history()
 wh_df = get_warehouse_utilization()
 estimated_savings = estimate_cost_savings(query_df, wh_df)
 
-st.set_page_config(page_title="💸 Snowflake Cost Insight Bot", layout="wide")
+st.set_page_config(page_title="Snowflake Cost Insight Bot", layout="wide")
 
 st.title(" Snowflake Cost Insight Bot")
 st.markdown("Get AI-generated insights on your Snowflake costs and usage.")
@@ -20,7 +20,7 @@ if st.button("Generate AI Insight"):
     with st.spinner("Generating suggestions..."):
         insights = generate_query_insights(query_df, estimated_savings)
 
-        st.success("✅ Insight Generated!")
+        st.success("Insight Generated!")
         st.markdown(insights)
 
 st.subheader("Warehouse Utilization")
