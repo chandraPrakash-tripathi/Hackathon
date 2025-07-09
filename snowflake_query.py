@@ -2,19 +2,23 @@ import os
 import snowflake.connector
 import pandas as pd
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
+
+
 def get_snowflake_connection():
     return snowflake.connector.connect(
-        user=os.getenv("SNOWFLAKE_USER"),
-        password=os.getenv("SNOWFLAKE_PASSWORD"),
-        account=os.getenv("SNOWFLAKE_ACCOUNT"),
-        warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
-        role=os.getenv("SNOWFLAKE_ROLE"),
+        user=st.secrets["SNOWFLAKE_USER"],
+        password=st.secrets["SNOWFLAKE_PASSWORD"],
+        account=st.secrets["SNOWFLAKE_ACCOUNT"],
+        role=st.secrets["SNOWFLAKE_ROLE"],
+        warehouse=st.secrets["SNOWFLAKE_WAREHOUSE"],
         database="SNOWFLAKE",
         schema="ACCOUNT_USAGE"
     )
+
 
 def get_query_history(days=3):
     query = f"""

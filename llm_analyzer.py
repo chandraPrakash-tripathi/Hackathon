@@ -2,10 +2,11 @@ import os
 import requests
 from dotenv import load_dotenv
 import pandas as pd
+import streamlit as st
 
 load_dotenv()
 
-TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
+together_api_key = st.secrets["TOGETHER_API_KEY"]
 
 def generate_query_insights(df: pd.DataFrame, savings: float) -> str:
     prompt = f"""
@@ -27,7 +28,7 @@ def generate_query_insights(df: pd.DataFrame, savings: float) -> str:
     }
 
     headers = {
-        "Authorization": f"Bearer {TOGETHER_API_KEY}",
+        "Authorization": f"Bearer {together_api_key}",
         "Content-Type": "application/json"
     }
 
