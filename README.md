@@ -24,7 +24,7 @@ This project was built for the **KIPI AI/ML Hackathon 2025** with the goal of re
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/chandraPrakash-tripathi/Hackathon
