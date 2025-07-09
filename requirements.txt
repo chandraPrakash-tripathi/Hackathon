@@ -1,0 +1,7 @@
+streamlit
+pandas
+openai
+snowflake-connector-python
+python-dotenv
+matplotlib
+vercel-ai
