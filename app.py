@@ -9,7 +9,7 @@ estimated_savings = estimate_cost_savings(query_df, wh_df)
 
 st.set_page_config(page_title="💸 Snowflake Cost Insight Bot", layout="wide")
 
-st.title("💸 Snowflake Cost Insight Bot")
+st.title(" Snowflake Cost Insight Bot")
 st.markdown("Get AI-generated insights on your Snowflake costs and usage.")
 
 st.subheader("Top Expensive Queries")
