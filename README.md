@@ -18,7 +18,7 @@ This project was built for the **KIPI AI/ML Hackathon 2025** with the goal of re
 - Estimates potential cost savings
 - Sends metadata to LLM (Together.ai – Mixtral) for AI-generated recommendations
 - Interactive Streamlit dashboard interface
-- Supports local `.env` configuration and offline CSV fallback
+- Supports local `.env` configuration 
 
 ---
 
